@@ -1,0 +1,23 @@
+{
+    "os": "Linux-4.15.0-133-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.7.0",
+    "heartbeatAt": "2021-03-15T18:26:43.906008",
+    "startedAt": "2021-03-15T18:26:43.305717",
+    "docker": null,
+    "gpu": "GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": "10.0.130",
+    "args": [
+        "--model",
+        "bert-base-uncased",
+        "--n_epochs",
+        "40"
+    ],
+    "state": "running",
+    "codePath": "multimodal_driver.py",
+    "program": "multimodal_driver.py",
+    "host": "hejx-B250-HD3P",
+    "username": "hejx",
+    "executable": "/home/hejx/anaconda3/envs/test/bin/python"
+}

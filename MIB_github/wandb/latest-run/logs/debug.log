@@ -1,0 +1,48 @@
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_setup.py:_flush():70] Unhandled environment var: WANDB_PROGRAM
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_setup.py:_flush():70] setting env: {}
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_setup.py:_flush():70] setting login settings: {'mode': 'offline'}
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_init.py:_log_setup():318] Logging user logs to /home/hejx/he/NLP/BERT_multimodal_transformer-master_now/wandb/offline-run-20210316_022643-10buz5mm/logs/debug.log
+2021-03-16 02:26:43,306 INFO    MainThread:32728 [wandb_init.py:_log_setup():319] Logging internal logs to /home/hejx/he/NLP/BERT_multimodal_transformer-master_now/wandb/offline-run-20210316_022643-10buz5mm/logs/debug-internal.log
+2021-03-16 02:26:43,914 INFO    MainThread:32728 [wandb_run.py:_console_start():1308] atexit reg
+2021-03-16 02:26:43,914 INFO    MainThread:32728 [wandb_run.py:_redirect():1175] redirect: SettingsConsole.REDIRECT
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [wandb_run.py:_redirect():1178] Redirecting console.
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [redirect.py:install():205] install start
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [redirect.py:install():220] install stop
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [redirect.py:install():205] install start
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [redirect.py:install():220] install stop
+2021-03-16 02:26:43,915 INFO    MainThread:32728 [wandb_run.py:_redirect():1222] Redirects installed.
+2021-03-16 02:26:43,916 INFO    MainThread:32728 [wandb_run.py:_config_callback():608] config_cb None None {'dataset': 'mosi', 'max_seq_length': 50, 'train_batch_size': 48, 'dev_batch_size': 128, 'test_batch_size': 128, 'n_epochs': 40, 'beta_shift': 1.0, 'dropout_prob': 0.5, 'model': 'bert-base-uncased', 'learning_rate': 1e-05, 'gradient_accumulation_step': 1, 'warmup_proportion': 0.1, 'seed': 6868}
+2021-03-16 02:37:06,573 INFO    MainThread:32728 [wandb_run.py:_atexit_cleanup():1278] got exitcode: 0
+2021-03-16 02:37:06,573 INFO    MainThread:32728 [wandb_run.py:_restore():1250] restore
+2021-03-16 02:37:06,573 INFO    MainThread:32728 [redirect.py:uninstall():224] uninstall start
+2021-03-16 02:37:06,573 INFO    MainThread:32728 [redirect.py:_stop():279] _stop: stdout
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():285] _stop closed: stdout
+2021-03-16 02:37:06,574 INFO    stdout    :32728 [redirect.py:_pipe_relay():121] relay done saw last write: stdout
+2021-03-16 02:37:06,574 INFO    stdout    :32728 [redirect.py:_pipe_relay():137] relay done done: stdout
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():291] _stop joined: stdout
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():293] _stop rd closed: stdout
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:uninstall():228] uninstall done
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:uninstall():224] uninstall start
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():279] _stop: stderr
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():285] _stop closed: stderr
+2021-03-16 02:37:06,574 INFO    stderr    :32728 [redirect.py:_pipe_relay():121] relay done saw last write: stderr
+2021-03-16 02:37:06,574 INFO    stderr    :32728 [redirect.py:_pipe_relay():137] relay done done: stderr
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():291] _stop joined: stderr
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:_stop():293] _stop rd closed: stderr
+2021-03-16 02:37:06,574 INFO    MainThread:32728 [redirect.py:uninstall():228] uninstall done
+2021-03-16 02:37:06,576 INFO    MainThread:32728 [wandb_run.py:_wait_for_finish():1395] got exit ret: uuid: "68986130a9f44a38b362cd710131fb79"
+
+2021-03-16 02:37:08,580 INFO    MainThread:32728 [wandb_run.py:_wait_for_finish():1395] got exit ret: uuid: "84b507dd1b684b068d7d63806ecddc27"
+response {
+  poll_exit_response {
+    done: true
+    exit_result {
+    }
+  }
+}
+
+2021-03-16 02:37:09,634 INFO    MainThread:32728 [wandb_run.py:_show_summary():1547] rendering summary
+2021-03-16 02:37:09,634 INFO    MainThread:32728 [wandb_run.py:_show_history():1585] rendering history
+2021-03-16 02:37:09,635 INFO    MainThread:32728 [internal.py:handle_exit():139] Internal process exited
