@@ -1,4 +1,4 @@
-# Multimodal-Information-Bottleneck
+# Multimodal-Information-Bottleneck (MIB)
 
 Here is the code for the paper "Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations". The paper is accepted by IEEE Transactions on Multimedia, and the PDFis available at: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9767641.
 
