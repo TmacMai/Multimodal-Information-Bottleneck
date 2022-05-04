@@ -1,6 +1,6 @@
 # Multimodal-Information-Bottleneck (MIB)
 
-Here is the code for the paper "Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations". The paper is accepted by IEEE Transactions on Multimedia, and the PDFis available at: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9767641.
+Here is the code for the paper "Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations". The paper is accepted by IEEE Transactions on Multimedia, and the PDF is available at: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9767641.
 
 Firstly, we would like to express our gratitude to the authors of MAG-BERT (https://github.com/WasifurRahman/BERT_multimodal_transformer). Their codes are of great help to our research.
 
