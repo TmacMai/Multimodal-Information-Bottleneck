@@ -1,6 +1,6 @@
 # Multimodal-Information-Bottleneck
 
-Here is the code for the paper "Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations" (MIB for multimodal sentiment analysis)
+Here is the code for the paper "Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations". The paper is accepted by IEEE Transactions on Multimedia, and the PDFis available at: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9767641.
 
 Firstly, we would like to express our gratitude to the authors of MAG-BERT (https://github.com/WasifurRahman/BERT_multimodal_transformer). Their codes are of great help to our research.
 
@@ -33,6 +33,18 @@ To change the fusion methods, you can open the model files (cmib.py, emib.py, lm
 Currently two datasets are provided, i.e., mosi and mosei (please refer to https://github.com/A2Zadeh/CMU-MultimodalSDK for more details about the datasets). To run with mosei dataset, you should firstly open the global_configs.py, and then change the VISUAL_DIM to 47. Finally, we can run the code using the following commands (change the mib parameter to your desired one):
 
 python main_mib.py --mib cmib --dataset mosei --train_batch_size 32 --n_epochs 50
+
+If you find our codes useful, please cite our paper:
+
+@ARTICLE{9767641,
+  author={Mai, Sijie and Zeng, Ying and Hu, Haifeng},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TMM.2022.3171679}}
 
 
 
