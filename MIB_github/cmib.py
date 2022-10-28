@@ -879,8 +879,8 @@ class multiplication(nn.Module):
 
     def forward(self, l1, a1, v1):
      
-        fusion = a1*v1
-        fusion = v1*l1        
+      #  fusion = a1*v1
+        fusion = a1*v1*l1        
       #  fusion = self.norm2(fusion)
      #   fusion = self.drop(fusion)
         y_1 = torch.tanh(self.linear_1(fusion))
@@ -926,10 +926,7 @@ class addition(nn.Module):
 
     def forward(self, l1, a1, v1):
      
-        
-
         y_1 = l1 + a1 + v1
-
 
         return y_1
 
