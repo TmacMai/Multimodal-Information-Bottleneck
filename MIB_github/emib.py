@@ -685,12 +685,11 @@ class graph_fusion(nn.Module):
         sav = (1/(torch.matmul(a.unsqueeze(1), v.unsqueeze(2)).squeeze() +0.5) *(sa+sv))
         sal = (1/(torch.matmul(a.unsqueeze(1), l.unsqueeze(2)).squeeze() +0.5) *(sa+sl))
         svl = (1/(torch.matmul(v.unsqueeze(1), l.unsqueeze(2)).squeeze() +0.5) *(sl+sv))
-     #   print('sav',sav.shape)
+
         normalize = torch.cat([sav.unsqueeze(1), sal.unsqueeze(1), svl.unsqueeze(1)],1)
         normalize = F.softmax(normalize,1)
         total_weights = torch.cat([total_weights,normalize],1)
-    #    print('normalize',normalize.shape)
-     #   print((normalize[:,0].unsqueeze(1).expand(a.size(0),self.in_size)).shape,'shape')
+
         a_v = torch.tanh((normalize[:,0].unsqueeze(1).expand(a.size(0), self.in_size)) * self.graph_fusion(torch.cat([a1,v1],1)))
         a_l = torch.tanh((normalize[:,1].unsqueeze(1).expand(a.size(0), self.in_size)) * self.graph_fusion(torch.cat([a1,l1],1)))
         v_l = torch.tanh((normalize[:,2].unsqueeze(1).expand(a.size(0), self.in_size)) * self.graph_fusion(torch.cat([v1,l1],1)))
@@ -710,7 +709,6 @@ class graph_fusion(nn.Module):
         normalize2 = torch.cat([savvl.unsqueeze(1), saavl.unsqueeze(1), savll.unsqueeze(1), savl.unsqueeze(1), salv.unsqueeze(1), svla.unsqueeze(1)],1)
         normalize2 = F.softmax(normalize2,1)
         total_weights = torch.cat([total_weights,normalize2],1)
-       # print((normalize2[:,0].unsqueeze(1).expand(a.size(0),self.in_size)).shape,'shape')
         avvl = torch.tanh((normalize2[:,0].unsqueeze(1).expand(a.size(0),self.in_size)) * self.graph_fusion2(torch.cat([a_v,v_l],1)))
         aavl = torch.tanh((normalize2[:,1].unsqueeze(1).expand(a.size(0),self.in_size)) * self.graph_fusion2(torch.cat([a_v,a_l],1)))
         avll = torch.tanh((normalize2[:,2].unsqueeze(1).expand(a.size(0),self.in_size)) * self.graph_fusion2(torch.cat([v_l,a_l],1)))
@@ -718,15 +716,11 @@ class graph_fusion(nn.Module):
         alv = torch.tanh((normalize2[:,4].unsqueeze(1).expand(a.size(0),self.in_size)) * self.graph_fusion2(torch.cat([a_l,v1],1)))
         vla = torch.tanh((normalize2[:,5].unsqueeze(1).expand(a.size(0),self.in_size)) * self.graph_fusion2(torch.cat([v_l,a1],1)))
         trimodal = (avvl + aavl + avll + avl + alv + vla)
-        fusion = torch.cat([unimodal,bimodal],1)
-        fusion = torch.cat([fusion,trimodal],1)  
-      #  print(fusion.shape)      
-      #  fusion = self.norm2(fusion)
-     #   fusion = self.drop(fusion)
+        fusion = torch.cat([unimodal,bimodal,trimodal],1)
+
         y_1 = torch.tanh(self.linear_1(fusion))
         y_1 = torch.tanh(self.linear_2(y_1))
         y_2 = torch.tanh(self.linear_3(y_1))
-     #   y_3 = F.tanh(self.linear_3(y_2))
 
         return y_2
 
@@ -871,8 +865,8 @@ class multiplication(nn.Module):
 
     def forward(self, l1, a1, v1):
      
-        fusion = a1*v1
-        fusion = v1*l1        
+      #  fusion = a1*v1
+        fusion = a1*v1*l1        
       #  fusion = self.norm2(fusion)
      #   fusion = self.drop(fusion)
         y_1 = torch.relu(self.linear_1(fusion))
@@ -916,13 +910,8 @@ class addition(nn.Module):
        # self.linear_1 = nn.Linear(in_size, hidden)
 
 
-    def forward(self, l1, a1, v1):
-     
-        
-
+    def forward(self, l1, a1, v1): 
         y_1 = l1 + a1 + v1
-
-
         return y_1
 
 
