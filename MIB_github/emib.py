@@ -869,12 +869,12 @@ class multiplication(nn.Module):
         fusion = a1*v1*l1        
       #  fusion = self.norm2(fusion)
      #   fusion = self.drop(fusion)
-        y_1 = torch.relu(self.linear_1(fusion))
-        y_1 = torch.relu(self.linear_2(y_1))
-        y_2 = torch.relu(self.linear_3(y_1))
+     #   y_1 = torch.relu(self.linear_1(fusion))
+    #    y_1 = torch.relu(self.linear_2(y_1))
+     #   y_2 = torch.relu(self.linear_3(y_1))
      #   y_3 = F.tanh(self.linear_3(y_2))
 
-        return y_2
+        return fusion
 
 
 class concat(nn.Module):
