@@ -48,13 +48,21 @@ Finally, we can run the code using the following commands (change the mib parame
 If you find our codes useful, please cite our paper:
 
 @ARTICLE{9767641,
+
   author={Mai, Sijie and Zeng, Ying and Hu, Haifeng},
+  
   journal={IEEE Transactions on Multimedia}, 
+  
   title={Multimodal Information Bottleneck: Learning Minimal Sufficient Unimodal and Multimodal Representations}, 
+  
   year={2022},
+  
   volume={},
+  
   number={},
+  
   pages={1-1},
+  
   doi={10.1109/TMM.2022.3171679}}
 
 
